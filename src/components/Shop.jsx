@@ -16,7 +16,7 @@ const Shop = () => {
         <button type="button" className="open-cart">
           View Items
         </button>
-        <ShowCase addToCart={addToCart} />
+        <ShowCase addToCart={addToCart} numberOfItems={10} />
       </div>
     </>
   );

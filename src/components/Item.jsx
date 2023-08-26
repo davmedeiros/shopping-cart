@@ -29,12 +29,13 @@ const Item = ({ id, addToCart }) => {
   if (error) return <p>A network error was encountered</p>;
   if (isLoading) return <p>Loading...</p>;
 
-  console.log(item);
-
   return (
     <div className="item" key={item.id}>
-      <p>{item.title}</p>
-      <p>{item.price}</p>
+      <div className="image-container">
+        <img src={item.image} alt={item.name} className="item-image" />
+      </div>
+      <p className="item-title">{item.title}</p>
+      <p className="item-price">{item.price}</p>
       <button
         type="button"
         onClick={() => {

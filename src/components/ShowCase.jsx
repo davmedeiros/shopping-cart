@@ -1,4 +1,6 @@
-const ShowCase = () => {
+import PropTypes from 'prop-types';
+
+const ShowCase = ({ addToCart }) => {
   // TODO: Replace items with the ones fetched from the API
   const items = [
     {
@@ -24,10 +26,22 @@ const ShowCase = () => {
         <div className="item" key={item.id}>
           <p>{item.name}</p>
           <p>{item.price}</p>
+          <button
+            type="button"
+            onClick={() => {
+              addToCart(1);
+            }}
+          >
+            Add to cart
+          </button>
         </div>
       ))}
     </div>
   );
+};
+
+ShowCase.propTypes = {
+  addToCart: PropTypes.func,
 };
 
 export default ShowCase;

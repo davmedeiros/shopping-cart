@@ -2,17 +2,21 @@ import { useState } from 'react';
 import ShowCase from './ShowCase';
 
 const Shop = () => {
-  const [numberOfItems, setNumberOfItems] = useState(0);
+  const [itemsOnCart, setItemsOnCart] = useState(0);
+
+  const addToCart = (number = 0) => {
+    setItemsOnCart(itemsOnCart + number);
+  };
 
   return (
     <>
       <h2>Shop</h2>
       <div className="cart-info">
-        <p>Item in the cart: {numberOfItems}</p>
+        <p>Item in the cart: {itemsOnCart}</p>
         <button type="button" className="open-cart">
           View Items
         </button>
-        <ShowCase />
+        <ShowCase addToCart={addToCart} />
       </div>
     </>
   );

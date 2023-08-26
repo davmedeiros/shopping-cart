@@ -5,7 +5,7 @@ const Shop = () => {
   const [itemsOnCart, setItemsOnCart] = useState(0);
 
   const addToCart = (number = 0) => {
-    setItemsOnCart(itemsOnCart + number);
+    setItemsOnCart(itemsOnCart + Number(number));
   };
 
   return (

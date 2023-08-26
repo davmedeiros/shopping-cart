@@ -40,7 +40,6 @@ const Item = ({ id, addToCart }) => {
       <input
         type="number"
         name="amount"
-        id="amount"
         value={amount}
         onChange={(event) => {
           setAmount(event.target.value);

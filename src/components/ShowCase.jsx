@@ -21,7 +21,7 @@ const ShowCase = () => {
   return (
     <div className="showcase">
       {items.map((item) => (
-        <div key={item.id}>
+        <div className="item" key={item.id}>
           <p>{item.name}</p>
           <p>{item.price}</p>
         </div>

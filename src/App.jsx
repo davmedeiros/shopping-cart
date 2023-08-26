@@ -1,14 +1,17 @@
 import './App.css';
-import { Link } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
     <>
-      <h1>hello</h1>
-      <Link to="/">Home</Link>
-      <Link to="shop">Shop</Link>
-      <Outlet />
+      <header>
+        <h1>zhOOpers</h1>
+        <Navigation className={'header-nav'} items={['Home', 'Shop']} />
+      </header>
+      <main>
+        <Outlet />
+      </main>
     </>
   );
 }

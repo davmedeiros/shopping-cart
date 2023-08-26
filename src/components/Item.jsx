@@ -25,6 +25,7 @@ const FetchItem = (id) => {
 
 const Item = ({ id, addToCart }) => {
   const { item, error, isLoading } = FetchItem(id);
+  const [amount, setAmount] = useState(0);
 
   if (error) return <p>A network error was encountered</p>;
   if (isLoading) return <p>Loading...</p>;
@@ -36,10 +37,19 @@ const Item = ({ id, addToCart }) => {
       </div>
       <p className="item-title">{item.title}</p>
       <p className="item-price">{item.price}</p>
+      <input
+        type="number"
+        name="amount"
+        id="amount"
+        value={amount}
+        onChange={(event) => {
+          setAmount(event.target.value);
+        }}
+      />
       <button
         type="button"
         onClick={() => {
-          addToCart(1);
+          addToCart(Number(amount));
         }}
       >
         Add to cart

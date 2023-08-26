@@ -7,8 +7,11 @@ const Navigation = ({ className, items }) => {
       <menu>
         {items.map((item) => (
           <li key={item}>
-            <Link to={item.toLowerCase() === 'home' ? '/' : item.toLowerCase()}>
-              {item}
+            <Link
+              to={item.toLowerCase() === 'home' ? '/' : item.toLowerCase()}
+              className="tab"
+            >
+              <div>{item}</div>
             </Link>
           </li>
         ))}

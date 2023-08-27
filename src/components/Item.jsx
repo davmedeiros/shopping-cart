@@ -1,3 +1,4 @@
+import '../styles/Item.css';
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -35,24 +36,26 @@ const Item = ({ id, addToCart }) => {
       <div className="image-container">
         <img src={item.image} alt={item.name} className="item-image" />
       </div>
-      <p className="item-title">{item.title}</p>
-      <p className="item-price">{item.price}</p>
-      <input
-        type="number"
-        name="amount"
-        value={amount}
-        onChange={(event) => {
-          setAmount(event.target.value);
-        }}
-      />
-      <button
-        type="button"
-        onClick={() => {
-          addToCart(Number(amount));
-        }}
-      >
-        Add to cart
-      </button>
+      <div className="item-details">
+        <p className="item-title">{item.title}</p>
+        <p className="item-price">Price: ${item.price}</p>
+        <input
+          type="number"
+          name="amount"
+          value={amount}
+          onChange={(event) => {
+            setAmount(event.target.value);
+          }}
+        />
+        <button
+          type="button"
+          onClick={() => {
+            addToCart(Number(amount));
+          }}
+        >
+          Add to cart
+        </button>
+      </div>
     </div>
   );
 };

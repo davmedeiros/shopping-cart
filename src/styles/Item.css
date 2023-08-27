@@ -1,0 +1,25 @@
+.item {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+  display: grid;
+  grid-template-rows: 200px 1fr;
+  overflow: hidden;
+  grid-auto-columns: 0.8fr;
+  padding: 16px 0;
+  justify-content: center;
+}
+
+.image-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.item-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.item-details {
+  display: grid;
+  grid-template-rows: 1fr repeat(3, 40px);
+  gap: 10px;
+}

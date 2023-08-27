@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import Item from './Item';
+import '../styles/ShowCase.css';
 
 const ShowCase = ({ addToCart, numberOfItems = 1 }) => {
   const items = [];

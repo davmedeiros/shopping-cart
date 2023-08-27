@@ -26,7 +26,7 @@ const FetchItem = (id) => {
 
 const Item = ({ id, addToCart }) => {
   const { item, error, isLoading } = FetchItem(id);
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState(1);
 
   if (error) return <p>A network error was encountered</p>;
   if (isLoading) return <p>Loading...</p>;

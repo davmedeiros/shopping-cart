@@ -62,6 +62,14 @@ li a {
   font-weight: bold;
 }
 
-.tab:hover {
+button {
+  cursor: pointer;
+  background-color: var(--color-omega);
+  color: var(--color-alpha);
+  border: none;
+}
+
+.tab:hover,
+button:hover {
   background-color: var(--color-psi);
 }

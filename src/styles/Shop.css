@@ -1,0 +1,14 @@
+.cart-info {
+  display: grid;
+  justify-content: end;
+  margin-right: 40px;
+}
+
+.open-cart {
+  padding: 10px 5px;
+}
+
+.cart-info > p {
+  background-color: var(--color-beta);
+  padding: 10px;
+}

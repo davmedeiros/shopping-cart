@@ -20,6 +20,7 @@
 
 #root {
   display: grid;
+  color: var(--color-omega);
 }
 
 header {
@@ -72,4 +73,8 @@ button {
 .tab:hover,
 button:hover {
   background-color: var(--color-psi);
+}
+
+input {
+  border: 2px solid var(--color-beta);
 }

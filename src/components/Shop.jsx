@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ShowCase from './ShowCase';
+import '../styles/Shop.css';
 
 const Shop = () => {
   const [itemsOnCart, setItemsOnCart] = useState(0);
@@ -10,14 +11,13 @@ const Shop = () => {
 
   return (
     <>
-      <h2>Shop</h2>
       <div className="cart-info">
         <p>Item in the cart: {itemsOnCart}</p>
         <button type="button" className="open-cart">
           View Items
         </button>
-        <ShowCase addToCart={addToCart} numberOfItems={10} />
       </div>
+      <ShowCase addToCart={addToCart} numberOfItems={10} />
     </>
   );
 };

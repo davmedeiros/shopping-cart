@@ -1,1 +1,1 @@
-# TOP - Shopping Cart
+# TOP - Educational Project - Shopping Cart
